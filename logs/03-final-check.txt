@@ -1,0 +1,16 @@
+$ date --iso-8601=seconds
+2026-10-26T12:45:21+03:00
+$ rabbitmqctl list_queues name policy messages_ready messages_unacknowledged pid synchronised_slave_pids
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	policy	messages_ready	messages_unacknowledged	pid	synchronised_slave_pids
+hello	ha-all	0	0	<rabbit@rmq02.1793007135.1555.0>	[<rabbit@rmq01.1793007133.535.0>]
+$ rabbitmq-plugins list -e -m
+Listing plugins with pattern ".*" ...
+rabbitmq_management
+rabbitmq_management_agent
+rabbitmq_web_dispatch
+$ dpkg-query -W rabbitmq-server erlang-base python3-pika
+erlang-base	1:25.3.2.8+dfsg-1ubuntu4.8
+python3-pika	1.2.0-1
+rabbitmq-server	3.12.1-1ubuntu1.7

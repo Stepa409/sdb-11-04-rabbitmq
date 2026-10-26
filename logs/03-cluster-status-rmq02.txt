@@ -1,0 +1,68 @@
+$ rabbitmqctl cluster_status
+Cluster status of node rabbit@rmq02 ...
+[1mBasics[0m
+
+Cluster name: netology-11-04
+Total CPU cores available cluster-wide: 4
+
+[1mDisk Nodes[0m
+
+rabbit@rmq01
+rabbit@rmq02
+
+[1mRunning Nodes[0m
+
+rabbit@rmq01
+rabbit@rmq02
+
+[1mVersions[0m
+
+rabbit@rmq01: RabbitMQ 3.12.1 on Erlang 25.3.2.8
+rabbit@rmq02: RabbitMQ 3.12.1 on Erlang 25.3.2.8
+
+[1mCPU Cores[0m
+
+Node: rabbit@rmq01, available CPU cores: 2
+Node: rabbit@rmq02, available CPU cores: 2
+
+[1mMaintenance status[0m
+
+Node: rabbit@rmq01, status: not under maintenance
+Node: rabbit@rmq02, status: not under maintenance
+
+[1mAlarms[0m
+
+(none)
+
+[1mNetwork Partitions[0m
+
+(none)
+
+[1mListeners[0m
+
+Node: rabbit@rmq01, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq01, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq01, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+Node: rabbit@rmq02, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq02, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq02, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+
+[1mFeature flags[0m
+
+Flag: classic_mirrored_queue_version, state: enabled
+Flag: classic_queue_type_delivery_support, state: enabled
+Flag: direct_exchange_routing_v2, state: enabled
+Flag: drop_unroutable_metric, state: enabled
+Flag: empty_basic_get_metric, state: enabled
+Flag: feature_flags_v2, state: enabled
+Flag: implicit_default_bindings, state: enabled
+Flag: listener_records_in_ets, state: enabled
+Flag: maintenance_mode_status, state: enabled
+Flag: quorum_queue, state: enabled
+Flag: restart_streams, state: enabled
+Flag: stream_queue, state: enabled
+Flag: stream_sac_coordinator_unblock_group, state: enabled
+Flag: stream_single_active_consumer, state: enabled
+Flag: tracking_records_in_ets, state: enabled
+Flag: user_limits, state: enabled
+Flag: virtual_host_metadata, state: enabled

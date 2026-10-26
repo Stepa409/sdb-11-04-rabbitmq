@@ -1,0 +1,17 @@
+$ getent hosts rmq01 rmq02
+10.211.55.5     rmq01
+10.211.55.6     rmq02
+$ ping -c 2 rmq01
+PING rmq01 (10.211.55.5) 56(84) bytes of data.
+64 bytes from rmq01 (10.211.55.5): icmp_seq=1 ttl=64 time=0.418 ms
+64 bytes from rmq01 (10.211.55.5): icmp_seq=2 ttl=64 time=0.930 ms
+
+--- rmq01 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1020ms
+rtt min/avg/max/mdev = 0.418/0.674/0.930/0.256 ms
+$ rabbitmqctl stop_app
+Stopping rabbit application on node rabbit@rmq02 ...
+$ rabbitmqctl join_cluster rabbit@rmq01
+Clustering node rabbit@rmq02 with rabbit@rmq01
+$ rabbitmqctl start_app
+Starting node rabbit@rmq02 ...

@@ -1,0 +1,8 @@
+$ rabbitmqctl eval node().
+rabbit@rmq01
+$ rabbitmqadmin get queue='hello' ackmode=ack_requeue_true
++-------------+----------+---------------+--------------------------+---------------+------------------+-------------+
+| routing_key | exchange | message_count |         payload          | payload_bytes | payload_encoding | redelivered |
++-------------+----------+---------------+--------------------------+---------------+------------------+-------------+
+| hello       |          | 0             | Hello World! HA failover | 24            | string           | False       |
++-------------+----------+---------------+--------------------------+---------------+------------------+-------------+

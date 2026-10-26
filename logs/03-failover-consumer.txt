@@ -1,0 +1,6 @@
+$ systemctl stop rabbitmq-server  # rabbit@rmq01
+$ systemctl is-active rabbitmq-server
+inactive
+$ RMQ_HOST=10.211.55.6 python3 /opt/netology-rmq/consumer.py
+[*] Waiting for a message from hello via 10.211.55.6
+[x] Received 'Hello World! HA failover'
